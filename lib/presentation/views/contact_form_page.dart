@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:app_movil_frameworks/domain/entities/contact.dart';
-import 'package:app_movil_frameworks/presentation/providers/contact_provider.dart';
+import 'package:movil_api_contact/domain/entities/contact.dart';
+import 'package:movil_api_contact/presentation/providers/contact_provider.dart';
 
 class ContactFormPage extends ConsumerStatefulWidget {
   final Contact? contact;
@@ -65,9 +65,6 @@ class _ContactFormPageState extends ConsumerState<ContactFormPage> {
     }
   }
 
-
-
-
   InputDecoration _inputDecoration(String label) => InputDecoration(
     labelText: label,
     filled: true,
@@ -102,17 +99,20 @@ class _ContactFormPageState extends ConsumerState<ContactFormPage> {
                 decoration: _inputDecoration('Nombre'),
                 validator: (v) => v!.isEmpty ? 'Campo requerido' : null,
               ),
+              const SizedBox(height: 20),
               TextFormField(
                 controller: _empresaCtrl,
                 decoration: _inputDecoration('Empresa'),
                 validator: (v) => v!.isEmpty ? 'Campo requerido' : null,
               ),
+              const SizedBox(height: 20),
               TextFormField(
                 controller: _numeroCtrl,
                 decoration: _inputDecoration('Número'),
                 keyboardType: TextInputType.phone,
                 validator: (v) => v!.isEmpty || !RegExp(r'^\d{9,}$').hasMatch(v) ? 'Número inválido' : null,
               ),
+              const SizedBox(height: 20),
               TextFormField(
                 controller: _fotoCtrl,
                 decoration: _inputDecoration('URL de foto'),
@@ -130,7 +130,7 @@ class _ContactFormPageState extends ConsumerState<ContactFormPage> {
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                   ),
                   child: Text(isEditing ? 'Actualizar' : 'Crear',
-                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white)),
                 ),
               ),
             ],

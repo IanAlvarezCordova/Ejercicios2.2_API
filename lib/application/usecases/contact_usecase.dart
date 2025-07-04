@@ -1,5 +1,5 @@
-import 'package:app_movil_frameworks/domain/entities/contact.dart';
-import 'package:app_movil_frameworks/data/repositories/contact_repository_impl.dart';
+import 'package:movil_api_contact/domain/entities/contact.dart';
+import 'package:movil_api_contact/data/repositories/contact_repository_impl.dart';
 
 class ContactUseCases {
   final ContactRepositoryImpl repository;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:app_movil_frameworks/domain/entities/contact.dart';
-import 'package:app_movil_frameworks/presentation/providers/contact_provider.dart';
-import 'package:app_movil_frameworks/presentation/widgets/contact_tile.dart';
+import 'package:movil_api_contact/domain/entities/contact.dart';
+import 'package:movil_api_contact/presentation/providers/contact_provider.dart';
+import 'package:movil_api_contact/presentation/widgets/contact_tile.dart';
 
 class ContactListPage extends ConsumerStatefulWidget {
   const ContactListPage({super.key});

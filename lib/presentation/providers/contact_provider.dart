@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:app_movil_frameworks/domain/entities/contact.dart';
-import 'package:app_movil_frameworks/data/datasources/contact_api.dart';
-import 'package:app_movil_frameworks/data/repositories/contact_repository_impl.dart';
-import 'package:app_movil_frameworks/application/usecases/contact_usecase.dart';
+import 'package:movil_api_contact/domain/entities/contact.dart';
+import 'package:movil_api_contact/data/datasources/contact_api.dart';
+import 'package:movil_api_contact/data/repositories/contact_repository_impl.dart';
+import 'package:movil_api_contact/application/usecases/contact_usecase.dart';
 import 'package:http/http.dart' as http;
 
 final contactProvider = StateNotifierProvider<ContactNotifier, AsyncValue<List<Contact>>>((ref) {
